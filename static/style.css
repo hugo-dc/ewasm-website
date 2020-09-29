@@ -7,3 +7,12 @@
 .text-center {
     text-align: center;
 }
+.banner {
+    display: block;
+    margin: auto;
+    height: 450px;
+}
+
+.text-center {
+    text-align: center;
+}
