@@ -1,0 +1,96 @@
+<head>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+        integrity="sha256-aPeK/N8IHpHsvPBCf49iVKMdusfobKo2oxF8lRruWJg="
+        crossorigin="anonymous">
+  <link href="/style.css" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <section class="hero is-link is-bold">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+              <h1 class="title">Ewasm</h1>
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item" href="/projects">
+                Projects
+              </a>
+              <a class="navbar-item" href="/blog">
+                Blog
+              </a>
+              <a class="navbar-item" href="/faq">
+                FAQ
+              </a>
+              <a class="navbar-item" href="/contact">
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+    <div class="hero-body">
+      <div class="container centered" >
+        
+<h1 class="title">
+  Solidity 0.6.x features: Array Slices
+</h1>
+<p class="post-meta">Posted on May 26, 2020</p>
+<p><p>Starting from <a href="https://github.com/ethereum/solidity/releases/tag/v0.6.0">version 0.6.0</a>, Solidity supports array slices. 
+<a href="https://solidity.readthedocs.io/en/v0.6.8/types.html#array-slices">Array slices</a> are handy when you want to reference a 
+contiguous portion of an array but do not want to perform a full copy of that portion. For now, array slices are only 
+supported for calldata arrays.</p>
+<h2 id="how-to-use-array-slices">How to use Array Slices</h2>
+<p>The expression <code>x[start:end]</code> references a portion of the calldata array <code>x</code> starting at index <code>start</code> and ending just 
+before index <code>end</code>. </p>
+<p>Both <code>start</code> and <code>end</code> are optional. If not provided, <code>start</code> defaults to <code>0</code> and <code>end</code> defaults to the length of 
+the respective array.</p>
+<p>Please note that no copy from calldata to memory is performed.</p>
+<p>You can use the slice syntax on variables, but also with <code>msg.data</code>.</p>
+<p>Array slices can be especially useful in combination with <code>abi.decode</code> in the 
+<a href="https://solidity.ethereum.org/2020/03/26/fallback-receive-split/">fallback function</a>:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">pragma solidity ^0.6.5;
+
+interface OtherContract {
+    function changeOwner(address) external;
+}
+
+contract Proxy {
+    OtherContract implementation;
+    address badOwner;
+    fallback() external {
+        if (msg.sig == OtherContract.changeOwner.selector) {
+            // Here, abi.decode directly operates on the calldata array slice.
+            address newOwner = abi.decode(msg.data[4:], (address));
+            require(newOwner != badOwner);
+        }
+        (bool success,) = address(implementation).delegatecall(msg.data);
+        require(success);
+    }
+}
+</span></code></pre><h2 id="how-array-slices-work-internally">How Array Slices Work Internally</h2>
+<p>Calldata arrays have always been represented by two values: A start pointer and a length value. This is exactly the same 
+representation we use for calldata array slices.</p>
+<h2 id="limitations-and-future-plans">Limitations and Future Plans</h2>
+<p>Array slices support index access and <code>.length</code> just like arrays, but do not support most copy operations. </p>
+<p>As of now, array slices are only implemented for calldata.</p>
+</p>
+
+      </div>
+    </div>
+</body>
+</html>

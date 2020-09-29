@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://ewasm.ethereum.org/sitemap.xml
