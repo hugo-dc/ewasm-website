@@ -1,5 +1,5 @@
 +++
 title = "Frequently Asked Questions"
-template = "main-page.html"
+template = "general_page.html"
 page_template = "page.html"
 +++

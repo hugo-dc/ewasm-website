@@ -1,5 +1,5 @@
 +++
 title = "Publications"
-template = "main-page.html"
+template = "main_blog.html"
 page_template = "page.html"
 +++

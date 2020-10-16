@@ -1,5 +1,5 @@
 +++
 title = "Projects"
-template = "main-page.html"
+template = "general_page.html"
 page_template = "page.html"
 +++
