@@ -25,6 +25,7 @@ h2 {
     font-size: 1.5em;
     font-weight: bold;
     margin: 10px 10px 10px 0;
+    /*color: #ffffff; */
 }
 
 p {
@@ -42,4 +43,21 @@ p.post-meta {
 
 .container {
     max-width: 760px;
+}
+
+.main-bg {
+     margin: auto;
+    display: block;
+    text-align: center;
+    width: 60%;
+}
+
+.main-img {
+    margin-top: 50px;
+    width: 45%;
+/*    margin: auto; */
+}
+
+.main-h2 {
+    color: #ffffff;
 }
