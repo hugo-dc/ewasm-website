@@ -1,45 +1,46 @@
-<head>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />  
-  <link href="/bootstrap.min.css" rel="stylesheet" />
-  <link href="/style.css" rel="stylesheet">
-  <link href="/main.css" rel="stylesheet" />  
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-</head>
+<html>
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />  
+    <link href="/ewasm-website/bootstrap.min.css" rel="stylesheet" />
+    <link href="/ewasm-website/style.css" rel="stylesheet">
+    <link href="/ewasm-website/main.css" rel="stylesheet" />  
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
 
-<body>
+  <body>
 
-  <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                data-target="#main-navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="https://ewasm.ethereum.org">Ewasm</a>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+                  data-target="#main-navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/ewasm-website/">Ewasm</a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="/ewasm-website/projects">Projects</a>
+            </li>
+            <li>
+              <a href="/ewasm-website/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/ewasm-website/faq">FAQ</a>
+            </li>
+            <li>
+              <a href="/ewasm-website/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="collapse navbar-collapse" id="main-navbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="/projects">Projects</a>
-          </li>
-          <li>
-            <a href="/blog">Blog</a>
-          </li>
-          <li>
-            <a href="/faq">FAQ</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+    </nav>
+    <div class="main-container" >
+      {% block content %} {% endblock %}
     </div>
-  </nav>
-  <div class="main-container" >
-    {% block content %} {% endblock %}
-  </div>
-</body>
+  </body>
 </html>

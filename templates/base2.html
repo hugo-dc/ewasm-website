@@ -1,109 +1,66 @@
-<head>
-  <!--<link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
-        integrity="sha256-aPeK/N8IHpHsvPBCf49iVKMdusfobKo2oxF8lRruWJg="
-        crossorigin="anonymous">
-    -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />  
-  <link href="/bootstrap.min.css" rel="stylesheet" />
-  <link href="/style.css" rel="stylesheet">
-  <link href="/main.css" rel="stylesheet" />
-  <!--<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>-->
-</head>
+<html>
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />  
+    <link href="/ewasm-website/bootstrap.min.css" rel="stylesheet" />
+    <link href="/ewasm-website/style.css" rel="stylesheet">
+    <link href="/ewasm-website/main.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                data-target="#main-navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="https://ewasm.ethereum.org">Ewasm</a>
-      </div>
-      <div class="collapse navbar-collapse" id="main-navbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="/projects">Projects</a>
-          </li>
-          <li>
-            <a href="/blog">Blog</a>
-          </li>
-          <li>
-            <a href="/faq">FAQ</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <div class="avatar-container">
-        <div class="avatar-img-border">
-          <a href="https://ewasm.ethereum.org">
-            <img class="avatar-img" src="/ewasm2d.jpg" />
-          </a>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+                  data-target="#main-navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/ewasm-website/">Ewasm</a>
         </div>
-      </div>
-    </div>
-  </nav>
-
-
-  <header class="header-section ">
-    <div class="intro-header no-img">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              <h1>Ewasm Blog</h1>
-              <hr class="small">
-              <span class="page-subheading">Latest updates from the Ewasm Team</span>
-            </div>
-          </div>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="/ewasm-website/projects">Projects</a>
+            </li>
+            <li>
+              <a href="/ewasm-website/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/ewasm-website/faq">FAQ</a>
+            </li>
+            <li>
+              <a href="/ewasm-website/contact">Contact</a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </header>
-
-    
-  <!--
-  <section class="hero is-link is-bold">
-    <div class="hero-head">
-      <nav class="navbar">
-        <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="../">
-              <h1 class="title">Ewasm</h1>
+        <div class="avatar-container">
+          <div class="avatar-img-border">
+            <a href="https://ewasm.ethereum.org">
+              <img class="avatar-img" src="/ewasm2d.jpg" />
             </a>
-            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
           </div>
-          <div id="navbarMenuHeroA" class="navbar-menu">
-            <div class="navbar-end">
-              <a class="navbar-item" href="/ewasm-website/projects">
-                Projects
-              </a>
-              <a class="navbar-item" href="/ewasm-website/blog">
-                Blog
-              </a>
-              <a class="navbar-item" href="/ewasm-website/faq">
-                FAQ
-              </a>
-              <a class="navbar-item" href="/ewasm-website/contact">
-                Contact
-              </a>
+        </div>
+      </div>
+    </nav>
+
+
+    <header class="header-section ">
+      <div class="intro-header no-img">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="page-heading">
+                <h1>Ewasm Blog</h1>
+                <hr class="small">
+                <span class="page-subheading">Latest updates from the Ewasm Team</span>
+              </div>
             </div>
           </div>
         </div>
-      </nav>
-    </div>
-  </section>
-  -->
+      </div>
+    </header>
     <div class="hero-body">
       <div class="container centered" >
         {% block content %} {% endblock %}
@@ -152,17 +109,15 @@
             &nbsp;&bull;&nbsp;
             <a href="/archive/">Blog Archive</a>
           </p>
-</p>
-</div>
-</div>
-</div>
+        </div>
+      </div>
     </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-      	if (typeof jQuery == 'undefined') {
-      	  document.write('<script src="/jquery-1.11.2.min.js"></scr' + 'ipt>');
-      	}
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+      if (typeof jQuery == 'undefined') {
+        document.write('<script src="/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      }
       </script>
-<script src="/bootstrap.min.js"></script>
-<script src="/main.js"></script>
-</body>
+    <script src="/bootstrap.min.js"></script>
+    <script src="/main.js"></script>
+  </body>
 </html>
