@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://hugo-dc.github.io/ewasm-website/sitemap.xml

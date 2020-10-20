@@ -1,0 +1,166 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />  
+    <link href="/ewasm-website/bootstrap.min.css" rel="stylesheet" />
+    <link href="/ewasm-website/main.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+                  data-target="#main-navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/ewasm-website">Ewasm</a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="/ewasm-website/projects">Projects</a>
+            </li>
+            <li>
+              <a href="/ewasm-website/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/ewasm-website/faq">FAQ</a>
+            </li>
+            <li>
+              <a href="/ewasm-website/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="avatar-container">
+          <div class="avatar-img-border">
+            <a href="https://ewasm.ethereum.org">
+              <img class="avatar-img" src="/ewasm-website/ewasm2d.jpg" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <header class="header-section ">
+      <div class="intro-header no-img">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="page-heading">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="hero-body">
+      <div class="container centered" >
+        
+<h1 class="title">
+  2018 - Ewasm 1.0
+</h1>
+<p class="post-meta">Posted on Jan 01, 2018</p>
+<p><p>The team started the implementation of Ewasm 1.0 as defined in the
+<a href="https://github.com/ewasm/design">design</a>, which included:</p>
+<hr />
+<p><strong><a href="https://github.com/ewasm/hera">Hera (C++)</a> and <a href="https://github.com/ewasm/hera.rs">Hera.rs
+(Rust)</a></strong>: The ewasm 1.0 virtual machine which
+can be integrated in existing Ethereum client compatible with
+<a href="https://github.com/ethereum/evmc">EVMC</a>. Hera has support to different
+WebAssembly interpreters and compilers such as:</p>
+<ul>
+<li><a href="https://github.com/webassembly/wabt">Wabt</a></li>
+<li><a href="https://github.com/webassembly/binaryen">Binaryen</a></li>
+<li><a href="https://github.com/WAVM/WAVM">WAVM</a></li>
+</ul>
+<hr />
+<p><strong><a href="https://github.com/ewasm/tests/tree/wasm-tests/src/GeneralStateTestsFiller/stEWASMTests">Ewasm
+Tests</a></strong>:
+Created test cases using the existing Ethereum tests infrastructure, generating
+and executing tests using an Ethereum client compatible with Ewasm.</p>
+<hr />
+<p><strong><a href="https://github.com/ewasm/sentinel-rs">Sentinel Contract</a></strong>: Ewasm Contract
+(Written in Rust), validates and inject metering to contracts at deploy time.</p>
+<hr />
+<p><strong><a href="https://github.com/ewasm/ewasm-rust-api">ewasm-rust-api</a></strong>: Rust library
+which defines an Ewasm API that allows accessing Ewasm functions from your
+contracts written in Rust.</p>
+<p><strong><a href="https://github.com/ewasm/etherchain-light">Block Explorer (Etherchain
+Light</a></strong>: Adapted existing Open
+Source Project <a href="https://github.com/gobitfly/etherchain-light">Etherchain Light</a>
+to help us visualize blocks in the Ewasm testnet.</p>
+<hr />
+<p><strong>Ewasm Testnet</strong>: All these projects allowed to run an Ethereum 1.0 Testnet
+with Ewasm Support, this means you could create contracts in a language
+targetting EVM (i.e. Solidity), or you could write contracts using a language
+targetting WebAssembly (Rust, C, AssemblyScript, etc), and live in the same
+testnet.<br />
+<br />
+This tesnet used to live in this same address
+(<a href="http://ewasm.ethereum.org">http://ewasm.ethereum.org</a>), but currently is not being maintained. However
+you can play with a Ewasm 1.0 Testnet in your local environment using this
+repository: <a href="https://github.com/jwasinger/ewasm-dev-env">https://github.com/jwasinger/ewasm-dev-env</a>.</p>
+</p>
+
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <ul class="list-inline text-center footer-links"><li><a href="/feed.xml" title="RSS"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">RSS</span>
+              </a>
+            </li><li><a href="/cdn-cgi/l/email-protection#b5c6dad9dcd1dcc1ccf5d0c1ddd0c7d0c0d89bdac7d2" title="Email me"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li><li><a href="https://github.com/ewasm" title="GitHub"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </li><li><a href="https://gitter.im/ethereum/ewasm" title="Gitter"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Discord</span>
+              </a>
+            </li><li><a href="https://twitter.com/ethereumWasm" title="Twitter"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Twitter</span>
+              </a>
+          </li></ul>
+          <p class="copyright text-muted">
+            Ewasm Team
+            &nbsp;&bull;&nbsp;
+            2020
+            &nbsp;&bull;&nbsp;
+            <a href="https://ewasm.ethereum.org">ewasm.ethereum.org</a>
+            &nbsp;&bull;&nbsp;
+            <a href="/archive/">Blog Archive</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+      if (typeof jQuery == 'undefined') {
+        document.write('<script src="/ewasm-website/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      }
+      </script>
+    <script src="/ewasm-website/bootstrap.min.js"></script>
+    <script src="/ewasm-website/main.js"></script>
+  </body>
+</html>
